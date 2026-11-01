@@ -1,0 +1,74 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-seo-master-skills",
+  "owner": {
+    "name": "ankushpanday33"
+  },
+  "metadata": {
+    "description": "The best of five open-source SEO skill packs merged into one Claude Code plugin: 45 sub-skills and 25 sub-agents for technical SEO, content and E-E-A-T, schema, Core Web Vitals, local, e-commerce, hreflang, AI search (GEO, AEO, citability, AI crawlers, llms.txt), keyword research, rank tracking, GitHub repo SEO and Naver. Every audit ends with a PDF report and copy-paste fix prompts for Claude Code, Cursor, Antigravity and Lovable."
+  },
+  "plugins": [
+    {
+      "name": "claude-seo-master",
+      "source": "./",
+      "description": "The best of five open-source SEO skill packs merged into one Claude Code plugin: 45 sub-skills and 25 sub-agents for technical SEO, content and E-E-A-T, schema, Core Web Vitals, local, e-commerce, hreflang, AI search (GEO, AEO, citability, AI crawlers, llms.txt), keyword research, rank tracking, GitHub repo SEO and Naver. Every audit ends with a PDF report and copy-paste fix prompts for Claude Code, Cursor, Antigravity and Lovable.",
+      "author": {
+        "name": "ankushpanday33",
+        "url": "https://github.com/ankushpanday33"
+      },
+      "category": "marketing",
+      "homepage": "https://github.com/ankushpanday33/Claude-Seo-Master-Skills",
+      "keywords": [
+        "seo",
+        "technical-seo",
+        "content-quality",
+        "e-e-a-t",
+        "schema-markup",
+        "core-web-vitals",
+        "local-seo",
+        "geo",
+        "ai-search",
+        "sitemap",
+        "image-optimization",
+        "image-serp",
+        "google-images",
+        "hreflang",
+        "google-search-console",
+        "pagespeed",
+        "crux",
+        "ga4",
+        "backlinks",
+        "moz",
+        "bing-webmaster",
+        "common-crawl",
+        "backlink-verification",
+        "semantic-clustering",
+        "topic-clusters",
+        "sxo",
+        "search-experience",
+        "drift-monitoring",
+        "ecommerce-seo",
+        "google-shopping",
+        "cultural-profiles",
+        "content-parity",
+        "mcp-extensions",
+        "headless-rendering",
+        "ssrf-safe-fetchers",
+        "ai-citation-optimization",
+        "synthesis-framework",
+        "aeo",
+        "llms-txt",
+        "ai-citability",
+        "keyword-research",
+        "rank-tracking",
+        "github-seo",
+        "naver",
+        "pdf-report",
+        "fix-prompts",
+        "cursor",
+        "lovable",
+        "antigravity"
+      ]
+    }
+  ]
+}

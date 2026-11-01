@@ -1,0 +1,28 @@
+[project]
+name = "claude-seo-master"
+version = "3.0.0"
+description = "Claude SEO Master Skills: five open-source SEO skill packs merged into one Claude Code plugin, with PDF reports and AI fix prompts"
+requires-python = ">=3.11"
+license = "MIT"
+readme = "README.md"
+authors = [
+  {name = "ankushpanday33"},
+  {name = "Daniel Agrici"},
+  {name = "Bhanu Namikaze"},
+  {name = "Zubair Trabzada"},
+  {name = "Ryze AI"},
+  {name = "leopard627"}
+]
+keywords = ["seo", "claude-code", "ai-tools", "schema-markup", "e-e-a-t", "geo"]
+
+[project.urls]
+Homepage = "https://github.com/ankushpanday33/Claude-Seo-Master-Skills"
+Repository = "https://github.com/ankushpanday33/Claude-Seo-Master-Skills"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
