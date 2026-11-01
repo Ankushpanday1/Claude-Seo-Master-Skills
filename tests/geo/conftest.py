@@ -2,4 +2,6 @@
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts" / "geo"))
+_geo_path = str(Path(__file__).resolve().parents[2] / "scripts" / "geo")
+if _geo_path not in sys.path:
+    sys.path.append(_geo_path)

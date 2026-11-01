@@ -3,7 +3,7 @@
 Load on demand from `seo-backlinks` when recommending how to earn links or when a
 site has a manual action for unnatural links. Merged from Agentic-SEO-Skill
 (`references/link-building.md`). Toxic patterns, anchor benchmarks and the
-disavow file format live in `skills/seo/references/backlink-quality.md`; this
+disavow file format live in `${CLAUDE_PLUGIN_ROOT}/skills/seo/references/backlink-quality.md`; this
 file does not repeat them.
 
 ## What Google devalues
