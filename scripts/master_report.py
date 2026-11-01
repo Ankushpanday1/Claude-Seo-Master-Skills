@@ -420,15 +420,23 @@ def write_prompts(data: dict, out: Path) -> list[Path]:
 
 def build_pdf(data: dict, path: Path) -> None:
     try:
-        from reportlab.graphics.shapes import Drawing, Rect, String, Circle, Wedge
+        from reportlab.graphics.shapes import Circle, Drawing, Rect, String, Wedge
         from reportlab.lib import colors
         from reportlab.lib.enums import TA_CENTER
         from reportlab.lib.pagesizes import A4
         from reportlab.lib.styles import ParagraphStyle
         from reportlab.lib.units import mm
         from reportlab.pdfgen import canvas as pdfcanvas
-        from reportlab.platypus import (KeepTogether, PageBreak, Paragraph, SimpleDocTemplate,
-                                        Spacer, Table, TableStyle, XPreformatted)
+        from reportlab.platypus import (
+            KeepTogether,
+            PageBreak,
+            Paragraph,
+            SimpleDocTemplate,
+            Spacer,
+            Table,
+            TableStyle,
+            XPreformatted,
+        )
     except ImportError:
         sys.exit("reportlab is required for the PDF. Run `/seo setup`, or `pip install reportlab`.")
 

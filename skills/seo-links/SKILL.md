@@ -16,7 +16,7 @@ and `link_profile.py` for external links.
 
 ## Scripts
 
-### 1. Internal Link Analysis (`scripts/internal_links.py`)
+### 1. Internal Link Analysis (`scripts/agentic/internal_links.py`)
 ```bash
 "${CLAUDE_PLUGIN_ROOT}/scripts/claude-seo" run agentic/internal_links.py <url> --depth 2 --json
 ```
@@ -28,7 +28,7 @@ Crawls up to 50 pages, reports:
 - Nofollow internal links (waste of link equity)
 - Pages with < 3 or > 100 internal links
 
-### 2. Broken Link Detection (`scripts/broken_links.py`)
+### 2. Broken Link Detection (`scripts/agentic/broken_links.py`)
 ```bash
 "${CLAUDE_PLUGIN_ROOT}/scripts/claude-seo" run agentic/broken_links.py <url> --json
 ```
@@ -38,7 +38,7 @@ Checks all links on a page for HTTP errors:
 - 301/302 chains → update to final destination
 - Timeout / connection errors → server issue
 
-### 3. External Link Profile (`scripts/link_profile.py`)
+### 3. External Link Profile (`scripts/agentic/link_profile.py`)
 ```bash
 "${CLAUDE_PLUGIN_ROOT}/scripts/claude-seo" run agentic/link_profile.py <url> --json
 ```
@@ -54,7 +54,7 @@ Analyzes external links from the page and discovers backlinks via CommonCrawl CD
 
 ### Internal Link Equity
 
-See `resources/references/link-building.md` for PageRank flow guidance.
+See `${CLAUDE_PLUGIN_ROOT}/skills/seo/references/link-building.md` for PageRank flow guidance.
 
 **Healthy signals:**
 - Pillar pages: 10+ internal links pointing in from related content
@@ -84,7 +84,7 @@ See `resources/references/link-building.md` for PageRank flow guidance.
 
 ### External Backlink Profile
 
-Reference `resources/references/link-building.md` for:
+Reference `${CLAUDE_PLUGIN_ROOT}/skills/seo/references/link-building.md` for:
 - Safe anchor text distribution targets (branded 40-50%, exact-match ≤5%)
 - Toxic link detection signals
 - Disavow file creation guide
