@@ -131,7 +131,7 @@ If you received a manual action for unnatural links:
 
 ## Internal Link Equity
 
-> See `scripts/internal_links.py` for automated internal link analysis.
+> See `scripts/agentic/internal_links.py` for automated internal link analysis.
 
 Internal links distribute PageRank (link equity) across the site. Key rules:
 
