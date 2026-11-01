@@ -752,6 +752,82 @@ Multi-page Lighthouse audit via Unlighthouse (extension, MIT, no API quota). **P
 /seo unlighthouse https://example.com --max-routes 50 --output-dir ./reports
 ```
 
+### `/seo report [findings.json|audit dir]`
+
+Generate client-ready PDF reports and AI fix prompts.
+
+### `/seo aeo <url>`
+
+Answer Engine Optimization: direct answer blocks, citation readiness, and query intent.
+
+### `/seo citability <url>`
+
+AI citability score (0-100) with passage rewrites.
+
+### `/seo ai-crawlers <url>`
+
+AI crawler access matrix (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended).
+
+### `/seo llmstxt <url|generate>`
+
+Validate or generate llms.txt and llms-full.txt files.
+
+### `/seo brand-mentions <brand>`
+
+Brand mentions across sources AI engines cite (Reddit, Wikipedia, YouTube, LinkedIn).
+
+### `/seo ai-platforms <url>`
+
+Per-engine readiness: AI Overviews, ChatGPT, Perplexity, Gemini, Copilot.
+
+### `/seo ai-visibility <brand>`
+
+AI visibility from real data via the Ryze MCP connector.
+
+### `/seo keywords <seed>`
+
+Keyword research from real Search Console data (Ryze MCP).
+
+### `/seo rank-tracking [period]`
+
+Position movers between two periods from Search Console.
+
+### `/seo competitor-gap <competitor>`
+
+Keyword and content gaps against a competitor.
+
+### `/seo vs-ads`
+
+Where paid search overlaps organic rankings (Ryze MCP).
+
+### `/seo links <url>`
+
+Internal linking, orphan pages, anchor text, broken links.
+
+### `/seo article <url>`
+
+Article and blog post SEO (editorial quality, metadata, intent).
+
+### `/seo github <owner/repo>`
+
+GitHub repository SEO: README, topics, social preview, search benchmark.
+
+### `/seo naver <url>`
+
+Naver SEO for Korea: Search Advisor, Yeti, AI Briefing citations.
+
+### `/seo proposal <url>`
+
+Client proposal from audit results (agencies).
+
+### `/seo prospect [command]`
+
+Prospect pipeline and CRM dashboard (agencies).
+
+### `/seo compare <audit-a> <audit-b>`
+
+Month-over-month score delta between two audits.
+
 ---
 
 ## Quick Reference
@@ -791,3 +867,22 @@ Multi-page Lighthouse audit via Unlighthouse (extension, MIT, no API quota). **P
 | `/seo bing [command] <url>` | Bing Webmaster Tools + IndexNow URL submission (extension) |
 | `/seo matomo [command] [args]` | Matomo Reporting API: GA4 alternative or complement (extension) |
 | `/seo unlighthouse <url>` | Multi-page Lighthouse runner, runs locally (extension) |
+| `/seo report [findings.json\|audit dir]` | PDF report + fix prompts |
+| `/seo aeo <url>` | Answer Engine Optimization |
+| `/seo citability <url>` | AI citability score |
+| `/seo ai-crawlers <url>` | AI crawler access matrix |
+| `/seo llmstxt <url\|generate>` | Validate or generate llms.txt |
+| `/seo brand-mentions <brand>` | Brand mentions analysis |
+| `/seo ai-platforms <url>` | Per-engine AI readiness |
+| `/seo ai-visibility <brand>` | AI visibility tracking |
+| `/seo keywords <seed>` | Keyword research |
+| `/seo rank-tracking [period]` | Position rank tracking |
+| `/seo competitor-gap <competitor>` | Competitor gap analysis |
+| `/seo vs-ads` | Paid vs organic overlap |
+| `/seo links <url>` | Link health & profile |
+| `/seo article <url>` | Article & blog SEO |
+| `/seo github <owner/repo>` | GitHub repository SEO |
+| `/seo naver <url>` | Naver SEO for Korea |
+| `/seo proposal <url>` | Client SEO proposal |
+| `/seo prospect [command]` | Prospect CRM pipeline |
+| `/seo compare <audit-a> <audit-b>` | Month-over-month audit comparison |

@@ -72,7 +72,7 @@ prefix: `run agentic/<script>.py` (Agentic-SEO-Skill, 100+ checkers),
 | `/seo citability <url>` | AI citability score (0-100) with passage rewrites |
 | `/seo ai-crawlers <url>` | AI crawler access matrix (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended) |
 | `/seo llmstxt <url\|generate>` | Validate or generate llms.txt (optional; ignored by Google Search) |
-| `/seo brands <brand>` | Brand mentions across sources AI engines cite (Reddit, Wikipedia, YouTube, LinkedIn) |
+| `/seo brand-mentions <brand>` | Brand mentions across sources AI engines cite (Reddit, Wikipedia, YouTube, LinkedIn) |
 | `/seo ai-platforms <url>` | Per-engine readiness: AI Overviews, ChatGPT, Perplexity, Gemini, Copilot |
 | `/seo ai-visibility <brand>` | AI visibility from real data via the Ryze MCP connector |
 | `/seo keywords <seed>` | Keyword research from real Search Console data (Ryze MCP) |
@@ -122,7 +122,7 @@ When the user invokes `/seo audit`, delegate to subagents in parallel:
 15. Create prioritized action plan with dependency sequencing + falsifiability per recommendation
 16. **Build the PDF report and fix prompts**: write `{domain}-audit/seo-findings.json`, then run `"${CLAUDE_PLUGIN_ROOT}/scripts/claude-seo" run master_report.py --data {domain}-audit/seo-findings.json --output-dir {domain}-audit/` (see `/seo report`). Offer `/seo google report full` too when Google APIs are connected.
 
-For individual commands, load the relevant sub-skill directly. Command `/seo <name>` maps to the skill `seo-<name>`; the exception is `/seo brands`, which loads `seo-brand-mentions`.
+For individual commands, load the relevant sub-skill directly. Command `/seo <name>` maps to the skill `seo-<name>` (such as `/seo brand-mentions` which loads `seo-brand-mentions`).
 After any analysis command completes, offer `/seo report` to turn its findings into a PDF and fix prompts for Claude Code, Cursor, Antigravity and Lovable.
 
 **Google update history questions** (core, spam, policy, product changes; "is the
