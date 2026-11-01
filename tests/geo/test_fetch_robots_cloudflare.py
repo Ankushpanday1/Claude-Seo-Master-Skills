@@ -7,13 +7,16 @@ check their own file on the server never see it.
 """
 
 import sys
-import os
-from unittest.mock import patch, MagicMock
-
+import importlib.util
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
+from unittest.mock import MagicMock, patch
 
-from fetch_page import fetch_robots_txt  # noqa: E402
+_geo_fetch_path = Path(__file__).resolve().parents[2] / "scripts" / "geo" / "fetch_page.py"
+_spec = importlib.util.spec_from_file_location("geo_fetch_page", _geo_fetch_path)
+geo_fetch_page = importlib.util.module_from_spec(_spec)
+sys.modules["geo_fetch_page"] = geo_fetch_page
+_spec.loader.exec_module(geo_fetch_page)
+fetch_robots_txt = geo_fetch_page.fetch_robots_txt
 
 
 CLOUDFLARE_MANAGED_ROBOTS = """# BEGIN Cloudflare Managed content
@@ -46,7 +49,7 @@ def _fetch_with_robots(text: str, status_code: int = 200) -> dict:
     mock_resp = MagicMock()
     mock_resp.status_code = status_code
     mock_resp.text = text
-    with patch("fetch_page.requests.get", return_value=mock_resp):
+    with patch.object(geo_fetch_page.requests, "get", return_value=mock_resp):
         return fetch_robots_txt("https://example.com/")
 
 

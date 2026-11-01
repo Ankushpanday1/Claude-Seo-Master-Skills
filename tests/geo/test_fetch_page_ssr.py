@@ -7,14 +7,16 @@ SSR/prerendering were incorrectly flagged as client-side-only.
 """
 
 import sys
-import os
-from unittest.mock import patch, MagicMock
-
-# Ensure scripts/ is importable from the worktree
+import importlib.util
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
+from unittest.mock import MagicMock, patch
 
-from fetch_page import fetch_page  # noqa: E402
+_geo_fetch_path = Path(__file__).resolve().parents[2] / "scripts" / "geo" / "fetch_page.py"
+_spec = importlib.util.spec_from_file_location("geo_fetch_page", _geo_fetch_path)
+geo_fetch_page = importlib.util.module_from_spec(_spec)
+sys.modules["geo_fetch_page"] = geo_fetch_page
+_spec.loader.exec_module(geo_fetch_page)
+fetch_page = geo_fetch_page.fetch_page
 
 
 def _make_response(html: str, status_code: int = 200):
@@ -30,7 +32,7 @@ def _make_response(html: str, status_code: int = 200):
 
 def _fetch_with_html(html: str) -> dict:
     """Call fetch_page with a mocked HTTP response returning the given HTML."""
-    with patch("fetch_page.requests.get", return_value=_make_response(html)):
+    with patch.object(geo_fetch_page.requests, "get", return_value=_make_response(html)):
         return fetch_page("http://example.com/")
 
 
