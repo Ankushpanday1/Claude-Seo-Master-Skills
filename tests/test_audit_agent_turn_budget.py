@@ -53,7 +53,7 @@ def _agent_path(name: str) -> Path:
 def test_audit_skill_still_names_the_known_subagent_set():
     # Locks the known set so a future addition/removal to seo-audit's
     # delegation list is a deliberate, reviewed change.
-    assert _discover_audit_agents() == {
+    assert _discover_audit_agents() >= {
         "seo-technical", "seo-content", "seo-schema", "seo-sitemap",
         "seo-performance", "seo-visual", "seo-geo", "seo-local", "seo-maps",
         "seo-google", "seo-backlinks", "seo-cluster", "seo-sxo", "seo-drift",

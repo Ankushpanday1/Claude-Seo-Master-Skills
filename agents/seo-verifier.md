@@ -25,7 +25,7 @@ You are the final verifier for SEO outputs across all workflows.
 
 ## Implementation Hook
 
-Use `scripts/finding_verifier.py` before final report generation when structured
+Use `scripts/agentic/finding_verifier.py` before final report generation when structured
 findings are available.
 
 ## Output Contract

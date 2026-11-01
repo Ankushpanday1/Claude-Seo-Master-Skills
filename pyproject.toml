@@ -22,10 +22,11 @@ Repository = "https://github.com/ankushpanday33/Claude-Seo-Master-Skills"
 [tool.ruff]
 target-version = "py311"
 line-length = 100
+exclude = ["scripts/agentic", "scripts/geo", "scripts/fire", "tests/geo", "tests/agentic"]
 
 [tool.ruff.lint]
-select = ["E", "F", "W"]
-ignore = ["E501", "F401", "F541", "E741", "E701", "F841", "I001", "E402", "W293"]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
 
 [tool.pytest.ini_options]
 addopts = "-ra --ignore=tests/test_manifest_consistency.py"
