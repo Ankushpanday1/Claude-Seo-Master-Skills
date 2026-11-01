@@ -11,7 +11,8 @@ import os
 from unittest.mock import patch, MagicMock
 
 # Ensure scripts/ is importable from the worktree
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 
 from fetch_page import fetch_page  # noqa: E402
 

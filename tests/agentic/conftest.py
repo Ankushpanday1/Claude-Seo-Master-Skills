@@ -2,4 +2,6 @@
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts" / "agentic"))
+_agentic_path = str(Path(__file__).resolve().parents[2] / "scripts" / "agentic")
+if _agentic_path not in sys.path:
+    sys.path.append(_agentic_path)
